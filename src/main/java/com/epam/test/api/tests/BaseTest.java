@@ -1,15 +1,13 @@
 package com.epam.test.api.tests;
+import com.epam.test.api.support.utils.ServiceHelper;
 
-import com.epam.test.api.support.driver.DriverFactory;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
+	public ServiceHelper serviceHelper;
 
-	protected WebDriver driver;
-
-	@BeforeMethod(description = "Init browser")
-	public void setUp() {
-		driver = DriverFactory.getDriver("chrome");
+	@BeforeTest
+	public void setup() {
+		serviceHelper = new ServiceHelper();
 	}
 }

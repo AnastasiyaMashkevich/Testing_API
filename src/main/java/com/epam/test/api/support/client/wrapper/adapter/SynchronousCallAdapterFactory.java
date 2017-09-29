@@ -1,4 +1,4 @@
-package com.epam.test.api.support.client.adapter;
+package com.epam.test.api.support.client.wrapper.adapter;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

@@ -1,26 +1,20 @@
 package com.epam.test.api.tests;
 
-import com.epam.test.api.support.driver.DriverFactory;
-import com.epam.test.api.support.pageobject.LoginPage;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
-public class test  extends BaseTest{
+import java.io.IOException;
 
-	@BeforeTest(description = "Init browser")
-	public void setUp() {
-	}
+public class test extends BaseTest{
+
+
 	@Test
-	public void openPage () throws Exception {
+	public void test () throws IOException {
 
-		driver.navigate().to("https://github.com");
-		new LoginPage(driver).login();
+		serviceHelper.getGeneralInfo();
+		serviceHelper.getComicsList();
+
 	}
 
-//	@Test
-//	public void test() {
-//		System.out.println(new ServiceHelper().getList("123").getTotalCount());
-//
-//	}
+
 }
