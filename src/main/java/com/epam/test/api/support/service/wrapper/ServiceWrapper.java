@@ -1,8 +1,8 @@
-package com.epam.test.api.support.client.wrapper;
+package com.epam.test.api.support.service.wrapper;
 
 
-import com.epam.test.api.support.client.service.Service;
-import com.epam.test.api.support.client.wrapper.adapter.SynchronousCallAdapterFactory;
+import com.epam.test.api.support.service.Service;
+import com.epam.test.api.support.utils.constants.ProjectConstants;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ServiceWrapper {
 
-    private static String baseUrl = "https://gateway.marvel.com";
+    private static String baseUrl = "https://" + ProjectConstants.MAIN_HOST;
 
 
     private static ThreadLocal<Retrofit> clients = new ThreadLocal<Retrofit>() {

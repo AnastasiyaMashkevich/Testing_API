@@ -2,9 +2,11 @@
 <suite name="testing API">
     <test name="github API" >
         <classes>
-            <class name="com.epam.test.api.tests.test" >
+            <class name="com.epam.test.api.tests.GeneralApiTest" >
                 <methods>
-                    <include name="test"/>
+                    <include name="responseBodyTest"/>
+                    <include name="generalRequestTest"/>
+                    <include name="generalResponceTest"/>
                 </methods>
             </class>
         </classes>
