@@ -13,10 +13,5 @@ public class Runner {
       testng.setTestSuites(suites);
       testng.run();
 
-//    ----- another variant ----
-//    TestNG testng = new TestNG();
-//    testng.setTestClasses(new Class[] { GoogleSearchTest.class });
-//    testng.run();
-
     }
 }
